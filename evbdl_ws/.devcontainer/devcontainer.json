@@ -1,0 +1,24 @@
+{
+  "name": "EVBDL ROS2 Dev",
+  "image": "evbdl-ros2-jazzy",
+  "runArgs": [
+    "--network=host",
+    "--env=DISPLAY=${env:DISPLAY}",
+    "--volume=/tmp/.X11-unix:/tmp/.X11-unix:rw"
+  ],
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ms-vscode.cpptools",
+        "ms-python.python",
+        "twxs.cmake",
+        "ms-iot.vscode-ros"
+      ]
+    }
+  },
+  "workspaceFolder": "/workspace/evbdl_ws",
+  "mounts": [
+    "source=${localWorkspaceFolder},target=/workspace/evbdl_ws,type=bind"
+  ],
+  "remoteUser": "root"
+}
